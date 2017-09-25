@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+		<title>Semirestful Users add User</title>
+		{% load static %}
+      <link rel="stylesheet" href="{% static 'semirestusers/userstyle.css' %}" media="screen" title="no title"  charset="utf-8">
+	</head>
+<body>
+  <h1> Add a new User</h1>
+	<hr>
+	{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+	<form action="/create" method="post">
+		{% csrf_token %}
+		<div class="form_group">
+			<p>First Name: <input type='text' name='first_name'></p>
+			<p>Last Name: <input type='text' name='last_name'></p>
+			<p>Email:<input type='text' name='email'></p>	
+			<input type="submit" value="Create"><br><br>
+			<a href="/index">Go Back</a>
+		</div>
+  </form>
+</body>
+</html>
