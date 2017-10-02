@@ -46,5 +46,3 @@ def destroy(request, user_id): #GET /users/<id>/destroy
 	print("data = ", user_id)
 	Users.objects.get(id=user_id).delete()
 	return redirect('/index')
- 
-   

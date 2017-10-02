@@ -67,4 +67,3 @@ class Users(models.Model):
 #Users.objects.create(first_name="Peewee", last_name="Herman", email="pewee@gmail.com")
 #Users.objects.create(first_name="Miss", last_name="Yvonne", email="myvonne@gmail.com")	
 #for user in Users.all(): print Users
-		
